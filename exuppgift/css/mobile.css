@@ -1,0 +1,231 @@
+/*
+Css för de mobila delarna. Har med media queries för olika upplösningar och andra saker som är speciellt för mobila enheter.
+*/
+
+/* Mobile nav */
+
+/* stil för hamburgermenyn */
+.mobile-nav-toggle
+{
+  display: none;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  margin: 10px;
+  padding: 5px 10px;
+  float: right;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mobile-nav-toggle > span, span:before, span:after
+{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.mobile-nav-toggle > span:before
+{
+  top: 15px;
+}
+
+.mobile-nav-toggle > span:after
+{
+  top: -17px;
+}
+
+
+.mobile-nav-toggle.is-open span
+{
+  background: transparent;
+}
+
+.mobile-nav-toggle.is-open span:before, .mobile-nav-toggle.is-open span:after
+{
+  transform-origin: center;
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.mobile-nav-toggle.is-open span:after
+{
+    transform: rotate(-45deg);
+}
+
+/* End stil för hamburgermenyn */
+
+/* Stil för mobil navigering */
+.mobile-nav
+{
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  padding: 30px 0 20px;
+  transform: translateY(-100%);
+}
+
+.mobile-nav > ul > li
+{
+  list-style: none;
+  font-family: Verdana;
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.mobile-nav > ul > li > a, a:visited
+{
+  text-decoration: none;
+  color: #000;
+}
+
+/* End Stil för mobil navigering */
+
+/* End Mobila nav */
+
+
+/* upplösning padda */
+
+@media screen and (max-width: 1000px)
+{
+  /*tar bort nav för desktop*/
+  nav
+  {
+    display: none;
+  }
+
+  /* Visar mobila menyn (kopplat till js) */
+  .mobile-nav.is-open
+  {
+    display: block;
+    transform: translateY(0%);
+  }
+
+  /* Visar hambrugermenyn */
+  .mobile-nav-toggle
+  {
+    display: flex;
+  }
+
+  /* Kolumner */
+  .col-3 /* 3 kolumner */
+  {
+    max-width: 333px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .col-2 /* 2 kolumner */
+  {
+    max-width: 500px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .col-1 /* 1 kolumn */
+  {
+    margin: 0;
+  }
+  /* End kolumner */
+
+  /* Buttons */
+  #webpage_button
+  {
+    background: rgba(243, 150, 234, 1);
+    color: #000;
+  }
+
+  #photo_button
+  {
+    background: rgba(255, 255, 255, 1);
+    color: #000;
+  }
+
+  #blog_button
+  {
+    background: rgba(255, 188, 254, 1);
+    color: #000;
+  }
+  /* End Buttons */
+
+
+}
+
+/* end upplösing padda */
+
+/* Upplösning mobil */
+
+@media screen and (max-width: 700px)
+{
+  /* Flex class */
+  .flex
+  {
+    display: block;
+  }
+
+  /* Kolumner */
+  .col-3 /* 3 kolumner */
+  {
+    max-width: 700px;
+    margin: 0px;
+  }
+
+  .col-2 /* 2 kolumner */
+  {
+    max-width: 700px;
+    margin: 0;
+    padding: 10% 0;
+  }
+
+  .col-1 /* 1 kolumn */
+  {
+    margin: 0;
+  }
+  /* End kolumner */
+
+  /* Bakgrunder */
+  .text-background1, .text-background2
+  {
+    display: flex;
+    align-items: center;
+  }
+
+  /* class för knappar */
+  .button
+  {
+    margin-top: 0;
+  }
+
+  /* class för bilder */
+ .pictures
+ {
+   margin-left: 30%;
+   margin-top: 0;
+ }
+
+ /* Typografi */
+  h1
+  {
+    text-align: center;
+  }
+
+  h2
+  {
+    padding-top: 0;
+  }
+
+  h3
+  {
+    padding: 30% 0 0 30%;
+  }
+  /* end typografi */
+
+}
+
+/* end Upplösning mobil */

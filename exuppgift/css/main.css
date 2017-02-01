@@ -1,0 +1,327 @@
+/* Allmän css som styr innehållets utseende om inte annat sägs i andra csser */
+
+/* En enkel css reset */
+*
+{
+  margin: 0 auto;
+}
+
+/* Innehåll */
+body
+{
+  background: #acacac;
+}
+
+/*
+Sektioner
+*/
+header
+{
+  background-image: url(../img/header_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+/*
+Menu style
+*/
+nav
+{
+  background: rgba(255, 255, 255, 0.6);
+  height: 40px;
+}
+
+nav > #head_menu
+{
+  float: left;
+}
+
+nav > #side_menu
+{
+  float: right;
+}
+
+nav > ul > li
+{
+  font-family: Verdana;
+  font-size: 2em;
+  list-style: none;
+  display: inline;
+  margin-right: 30px;
+}
+
+nav > ul > li > a, a:visited
+{
+  text-decoration: none;
+  color: #000;
+}
+
+nav > ul > li > a:hover
+{
+  color: #f396ea;
+  transition: all 0.3s ease-in-out;
+}
+
+/*
+End style menu
+*/
+
+#intro
+{
+  background-image: url(../img/section2_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#webpage
+{
+  background-image: url(../img/section1_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#photo
+{
+  background-image: url(../img/section2_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#blog
+{
+  background-image: url(../img/section3_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+footer
+{
+  background-image: url(../img/header_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+/*
+End Sektioner
+*/
+
+/*
+Flex classes
+*/
+
+.flex
+{
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-center
+{
+  justify-content: center;
+}
+
+/*
+Flex classes end
+*/
+
+/*
+Kolumner
+*/
+.col-1 /* 1 kolumn */
+{
+  max-width: 980px;
+  margin: 0 10px;
+}
+
+.col-2 /* 2 kolumner */
+{
+  max-width: 480px;
+  margin: 0 10px;
+}
+
+.col-3 /* 3 kolumner */
+{
+  max-width: 313px;
+  margin: 0 10px;
+}
+/*
+End kolumner
+*/
+
+/*
+Bakgrunder
+*/
+.text-background1
+{
+  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+}
+
+.text-background2
+{
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  color: #fff;
+}
+
+.text-background3
+{
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  padding: 20px 0;
+}
+/*
+End Bakgrunder
+*/
+
+/*
+Stil för bilder
+*/
+.pictures
+{
+  border-radius: 50%;
+  border: #fff 5px solid;
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.picture-up
+{
+  margin: -80px 0 0 0;
+}
+
+
+/*Stil för knappar*/
+a
+{
+  text-decoration: none;
+}
+
+.button
+{
+  width: 200px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0 ,0.75);
+  font-family: Verdana;
+  font-size: 2em;
+  padding: 1em;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+#webpage_button
+{
+  background: rgba(243, 150, 234, 0.3);
+  color: rgba(243, 150, 234, 1);
+}
+
+#photo_button
+{
+  background: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 1);
+}
+
+#blog_button
+{
+  background: rgba(255, 188, 254, 0.3);
+  color: rgba(255, 188, 254, 1);
+}
+
+.button:hover
+{
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+#webpage_button:hover
+{
+  background: rgba(243, 150, 234, 1);
+  color: #000;
+}
+
+#photo_button:hover
+{
+  background: rgba(255, 255, 255, 1);
+  color: #000;
+}
+
+#blog_button:hover
+{
+  background: rgba(255, 188, 254, 1);
+  color: #000;
+}
+
+/*End stil för knappar*/
+
+/*Typografi*/
+h1, h2, h3, h4, h6
+{
+  font-family: 'Merienda One';
+  font-size: 3em;
+  padding: 10% 0;
+}
+
+h1
+{
+  font-size: 5em;
+}
+
+h4
+{
+  padding: 0;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+h3
+{
+  padding-top: 80%;
+}
+
+h5
+{
+  font-family: 'Merienda One';
+  font-size: 2em;
+  padding-top: 3%;
+  text-align: center;
+}
+
+p
+{
+  font-family: Georgia;
+  font-size: 1.1em;
+  padding: 10px 20px;
+}
+
+/*End Typografi */
+
+/*
+Övriga detaljer
+*/
+.text-box /* begränsar texten så att den stannar på plats */
+{
+  width: 300px;
+}
+
+.outdented /* indenterar texten så punkterna hamnar utåt */
+{
+  text-indent: -0.7em;
+}
+
+.order-first /* Bestämmer vilken ordning kolumnerna ska ligga i */
+{
+  order: -1;
+}
+/*
+End Övriga detlajer
+*/

@@ -1,0 +1,22 @@
+/*
+Css för utskrift. Har tagit bort onödiga element och ändrat bakgrund på sektionerna så det ser bra ut vid utskrift.
+*/
+
+ /* Element som ska bort vid utskrift*/
+header, nav, .mobile-nav, footer
+{
+  display: none;
+}
+
+/* Ändrat bakgrunder */
+body, #intro, #webpage, #photo, #blog, .text-background1, .text-background2, .text-background3, .button, #webpage_button, #photo_button, #blog_button
+{
+  color: #000;
+  background: #fff;
+}
+
+/* Ändrat så att bilderna inte flyter utanför utskriften */
+.picture-up
+{
+  margin: 0;
+}
